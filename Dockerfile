@@ -5,6 +5,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN mkdir -p out && javac -d out $(find src -name "*.java")
+RUN mkdir -p out && javac -cp "lib/*" -d out $(find src -name "*.java")
 
-CMD ["java", "-cp", "out", "com.lostfound.LoginTest"]
+CMD ["java", "-cp", "out:lib/*", "com.lostfound.LoginTest"]
