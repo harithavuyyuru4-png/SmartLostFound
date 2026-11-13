@@ -15,6 +15,8 @@ public class DBConnection {
             String username = "root";
             String password = "root";
 
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
             con = DriverManager.getConnection(url, username, password);
 
             System.out.println("JDBC Connection Successful!");
@@ -26,3 +28,4 @@ public class DBConnection {
         return con;
     }
 }
+
