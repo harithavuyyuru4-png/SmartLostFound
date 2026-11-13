@@ -7,4 +7,4 @@ COPY . .
 
 RUN mkdir -p out && javac -cp "lib/*" -d out $(find src -name "*.java")
 
-CMD ["java", "-cp", "out:lib/*", "com.lostfound.LoginTest"]
+CMD ["java", "-cp", "/app/out:/app/lib/*", "com.lostfound.LoginTest"]
